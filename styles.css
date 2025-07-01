@@ -1,0 +1,425 @@
+body{
+     margin:0;
+    display: flex;
+     align-items: center;
+     flex-direction: column;
+     background-color: rgb(53, 51, 51);
+     color: white;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: .5rem 2rem;
+}
+.container input{
+    background-color: wheat;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 1rem;
+    border:3px double rgb(82, 23, 2);
+    padding: .5rem 4rem;
+    caret-color: red;     
+}
+.container input:hover{
+    transform: scale(1.05);  
+}
+.container button{
+font-size: 1rem;
+font-weight: bold;
+background-color: rgb(225, 222, 222);
+color:black;
+padding: .5rem 1rem; 
+border-radius: .5rem;
+margin-left: .5rem;
+cursor: pointer;
+border: none;
+transition: all .3s ease-in-out;
+}
+.container button:hover{
+background-color: rgba(225, 222, 222, 0.778);
+transform: scale(1.1);
+}
+
+h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    font-family: "Lakki Reddy", serif;
+    color: rgb(255, 196, 0); /* Pokémon yellow */
+    text-shadow:
+    2px 0px rgb(3, 45, 173),
+   -2px 0px rgb(42, 78, 188),
+    0px 2px rgb(3, 45, 173),
+    0px -2px rgb(42, 78, 188);
+    text-transform: uppercase;     
+}
+
+.message { 
+  border: 1px solid white;
+  padding: .1rem;
+  background-color: rgb(243, 243, 164);
+  width: fit-content;
+  border-radius: 5px;
+  margin-bottom: .2rem; 
+  color: red;
+  font-size: 1rem;
+  font-weight: bold; 
+  visibility: hidden;
+  min-height: 1.5rem; 
+}
+
+.input-blink {
+  animation: inputBlink 0.4s ease-in-out 3;
+  border: 2px solid red !important;
+}
+
+@keyframes inputBlink {
+  0%, 100% { background-color: white; }
+  50% { background-color: rgb(255, 255, 205); }
+}
+
+.defaultImage {
+  margin: 1.7rem 0;
+  max-width: 500px;  
+  width: 25%;        
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.defaultImage img {
+  width: 100%;
+  height: auto;               
+  object-fit: contain;        
+  mix-blend-mode:luminosity;  
+  opacity: .2;               
+}
+
+.pokeContainer{
+    margin: 2rem;
+     display: none;
+     width: 100%;
+     height: 50vh; 
+     font-family: Arial, Helvetica, sans-serif;
+     /*    border: 1px solid black;
+    margin: 1rem;
+    box-shadow: 5px 10px black;
+    border-radius: 21px;
+    padding: 1rem;
+    background-color: dimgrey;
+    display: flex
+;*/   
+} 
+.pokeContainer div{
+  
+    width: 50%;
+    height: auto;
+    padding: 1rem;    
+}
+
+#pokeImage{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-left: auto; 
+    transition: all .3s ease-in-out; 
+    
+}
+ 
+#pokeImage:hover{
+    transform: scale(1.1);
+}
+
+#pokeInfo{
+   
+    text-transform: capitalize;
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: .5rem;
+    overflow:auto;
+    
+    
+}
+strong{
+    
+   color: rgb(243, 243, 164);
+   letter-spacing: .5px;
+   
+}
+ul{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    
+}
+ul>li{
+    margin: 1rem;
+}
+#pokeInfo>ul{
+    list-style: none;
+}
+#pokeTypes,
+#pokeStats {
+  animation: appear .5s ease-in forwards;
+  list-style-type: none;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-top: 1rem;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100%{
+opacity: 1;
+transform: translateX(0);
+ 
+  }
+  
+}
+#pokeTypes li,
+#pokeStats li {
+  margin: 0.3rem 0.2rem;
+  
+}
+
+#pokeName{
+    animation: appear .4s ease-in forwards;
+    margin-left: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(243, 243, 164);
+    text-shadow:-1px 0px white,-1px 3px black,-1px 0px white,-1px 0px white;
+    
+} 
+#pokeHeight,#pokeWeight
+{
+    margin-left: 10px;
+    font-size: 1rem;
+    text-transform: none !important;
+    letter-spacing: 1px;
+
+}
+.typeBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: .5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+   
+}
+.fire {background-color: #FD7D24;}
+.normal{background-color: #A8A77A;}
+.water{background-color: #4592C4;}
+.electric{background-color: #F7D02C;}
+.grass{background-color: #7AC74C;}
+.ice{background-color: #96D9D6;}
+.fighting{background-color: #C22E28;}
+.Poison{background-color: #A33EA1;}
+.ground{background-color: #E2BF65;}
+.flying{background-color: #A98FF3;}
+.psychic{background-color: #F95587;}
+.bug{background-color: #A6B91A;}
+.rock{background-color: #B6A136;}
+.ghost{background-color: #735797;}
+.dragon{background-color: #6F35FC;}
+.dark{background-color: #705746;}
+.steel{background-color: #B7B7CE;}
+.fairy{background-color: #D685AD;}
+
+.error{
+    display: none;
+    font-size:1.2rem;
+    color:rgb(230, 226, 226);
+    font-weight: bold;
+    flex-direction: column;
+    margin-top:3rem;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn .5s forwards;
+
+}
+@keyframes zoomIn {
+    0%{
+        opacity: 0;
+         
+    }
+    50%{
+        opacity: .5;
+         
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.error img{
+    margin: 30px 0px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+footer{
+ 
+  color: rgb(176, 174, 174);
+  font-size: .6rem;
+
+}
+
+::-webkit-scrollbar-track{ 
+  background-color:rgb(53, 51, 51);
+}
+::-webkit-scrollbar{
+  width: 7px;
+  background-color: rgb(113, 202, 234);
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(113, 202, 234);
+}
+::selection {
+  background: #edd67a;
+  color: #1a1a1a;
+  text-shadow: 1px 2px 2px #fff, 0 0 4px #edd67a;
+}
+
+
+@keyframes zoominout {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ 
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.pokeball {
+    display: none;
+    opacity: .8;
+  top: 20%;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(to bottom, red 50%, white 50%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 0 6px black;
+}
+
+.pokeball::before {
+
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: black;
+  transform: translateY(-50%);
+}
+
+.pokeball::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 4px black;
+}
+.bounce {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+}
+
+@media (max-width:950px) and (min-width:650px) {
+  .defaultImage{
+    width: 40vw;
+  }
+ 
+}
+@media (max-width:650px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+    }
+    
+    .message{
+      margin: auto;
+    }
+    .defaultImage{
+      width: 50vw;
+      height: auto;
+    }
+    .pokeContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        align-content: center;
+    }
+    #pokeInfo{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem .5rem;
+    }
+     #pokeImage{
+        width: 100%;
+        margin:1rem 0rem;
+    }
+    
+    button{
+        margin-top: 1rem;
+    }
+}
+
+
+
+ 

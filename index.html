@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokemonFinder</title>
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
+</head>
+<body>    
+  <div class="container">
+    <h1>Pokemon Finder</h1>
+    
+    <div class="message">
+      <span>  Please enter a Pokemon Name !</span>
+    </div>
+      <input type="text" id="pokemonName" placeholder="Enter the pokemon name" class="">
+      <button id="find" onclick="search()">Find</button>
+  </div>
+     
+
+  <div class="defaultImage">
+    <img src="poke.png">
+  </div>
+  <div class="pokeContainer">
+    <div id="pokeImage">
+      <img src="" id="mainImage">
+    </div>
+    <div id="pokeInfo">
+      <ul>
+        <div id="pokeName"></div> 
+        <li><strong>Height:</strong> <span id="pokeHeight"></span></li>
+        <li><strong>Weight:</strong> <span id="pokeWeight"></span></li>
+        <li>
+        <strong>Types:</strong>
+        <ul id="pokeTypes"></ul>
+        </li>
+        <li>
+        <strong>Stats:</strong>
+        <ul id="pokeStats"></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+     
+  <div class="error">
+    Oops! Couldn't find that Pokemon. Try again?
+    <img src="psyduck-confused.gif">
+  </div>
+    
+  <div class="pokeball bounce"></div>
+<footer>GK ✨PokemonFinder✨ &copy;</footer>
+  <script src="index.js"></script>
+   
+</body>
+</html>
