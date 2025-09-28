@@ -7,7 +7,7 @@ Built with **pure HTML, CSS, and JavaScript** (no frameworks or libraries), this
 
 ## 🔗 Live Demo
 
-[View PokeFinder Live](https://gayatri-kumari.github.io/pokemonFinder/)
+[View PokemonFinder](https://gayatri-kumari.github.io/pokemonFinder/)
 
 ---
 
