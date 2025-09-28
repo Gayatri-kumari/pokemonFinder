@@ -13,7 +13,7 @@ Built with **pure HTML, CSS, and JavaScript** (no frameworks or libraries), this
 
 ## 📝 Features
 
-- **Search Pokémon by name** – type a name and click Search  
+- **Search Pokemon by name** – type a name and click Search  
 - **Validation for empty input** – visual alert if search is empty 
 - **PokeBall loading animation** – CSS animation displayed while fetching data  
 - **Error handling** – shows a fun GIF if Pokémon is not found  
@@ -38,13 +38,13 @@ Built with **pure HTML, CSS, and JavaScript** (no frameworks or libraries), this
 2. If the input is empty, a visual alert notifies the user.  
 3. While fetching data, a **PokéBall CSS animation** is displayed.  
 4. If the Pokemon exists, it shows a **floating image** and a scrollable box with details (name, type, stats, weight, height).  
-5. If the Pokemon doesn’t exist, a playful GIF is shown.  
+5. If the Pokemon doesn’t exist, a playful GIF is shown.
 
 ---
 
 ⚡ Notes
-
 Fully built with vanilla JS, no external frameworks or libraries.
 Designed to minimize scrolling on desktop while remaining responsive on mobile.
 Includes animations for loading, floating images, and error handling to enhance the user experience.
+
 ---
