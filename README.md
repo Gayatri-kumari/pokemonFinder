@@ -1,4 +1,4 @@
-# PokemonFinder 🐾
+# PokemonFinder 🔍
 
 **PokemonFinder** is a simple web app that allows you to search for Pokémon and view their details using the **PokéAPI**.  
 Built with **pure HTML, CSS, and JavaScript** (no frameworks or libraries), this project demonstrates API integration, dynamic DOM updates, animations, and responsive design.
